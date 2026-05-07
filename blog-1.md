@@ -1,5 +1,5 @@
 <!-- Question -->
-#### How do Pick and Omit utility types prevent code duplication while creating specialized "slices" of a master interface? Discuss how this keeps your code DRY (Don't Repeat Yourself).
+### Question-1  How do Pick and Omit utility types prevent code duplication while creating specialized "slices" of a master interface? Discuss how this keeps your code DRY (Don't Repeat Yourself).
 
 -------------
 
@@ -40,7 +40,8 @@ type ProductSummury = Pick<Product, "id" | "name">
 একই প্রপার্টি বারবার লিখতে হলো না। 
 
 ------
-আবার যদি এমন হয় আমার এটা অনেক বড় ইন্টারফেস আছে সেখান থেকে কিছু নির্দিষ্ট প্রোপার্টি বাদ দিয়ে বাকিগুলো নিয়ে একটা টাইপ দরকার সেক্ষেত্রেও আমাকে আবার লিখত হবে যেমন
+আবার যদি এমন হয় আমার এটা অনেক বড় ইন্টারফেস আছে সেখান থেকে কিছু নির্দিষ্ট প্রোপার্টি বাদ দিয়ে বাকিগুলো নিয়ে একটা টাইপ দরকার সেক্ষেত্রেও আমাকে আবার লিখত হতো। আবার আমরা একই কোড না লিখে `utility type` যেমন `omit` ব্যাবহার করতে পারি। যেমন-
+
 ### omit এর ব্যাবহার
  ```ts
 type ProdutWithoutColor = Omit<Product, "color">
@@ -48,6 +49,11 @@ type ProdutWithoutColor = Omit<Product, "color">
 
 এখানে `omit` main interface থেকে শুধু `color` বাদ দিয়ে একটা slice type তৈরি করে নিলো,,
 একই প্রপার্টি বারবার লিখতে হলো না। 
+
+#### আমার code যেভাবে DRY নীতি  মেনে চলে?
+
+`pick` আর `omit` ব্যাবহার করা ছাড়া যদি আমি manually সব লিখে ফেলতাম তাহলে main ইন্টারফেস এ পরিবর্তন আসলে আমাকে ধরে ধরে সব আপডেট করতে হতো। 
+কিন্তু `pick` আর `omit` ব্যাবহারের ফলে main ইন্টারফেসে কোন পরিবর্তন আসলে সবগুলোতেই automatically পরিবর্তন হয়ে যায়।  আর এটাই DRY (Don't Repeat Yourself) এর আসল পাওয়ার।  আর এভাবেই আমার কোড DRY নীতি মেনে চলে।
 
 ## Conclusion
 --------
