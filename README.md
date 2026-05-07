@@ -52,5 +52,5 @@ Topics include:
 
 এই blog এ explain করা হয়েছে:
 
-Generic কী ?
-Generics এমন reusable function/component বানাতে সাহায্য করে যেগুলো different data type এর সাথে কাজ করলেও type safety নষ্ট হয় না। বরং আমরা duplicated কোড লেখা রোধ করতে পারি এবং আলাদা আলাদা টাইপের ডাটা একটা ফাংশনেই পাঠাতে পারি।
+`Generic` কী ?
+`Generics` এমন reusable function/component বানাতে সাহায্য করে যেগুলো different data type এর সাথে কাজ করলেও type safety নষ্ট হয় না। বরং আমরা duplicated কোড লেখা রোধ করতে পারি এবং আলাদা আলাদা টাইপের ডাটা একটা ফাংশনেই পাঠাতে পারি।
