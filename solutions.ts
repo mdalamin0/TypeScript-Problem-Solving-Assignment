@@ -82,7 +82,7 @@ const student = new Student("Alice", 20, "A");
 // console.log(student.getDetails());
 
 // Problem 7
-const getIntersection = (array1: number[], array2: number[]) => {
+const getIntersection = (array1: number[], array2: number[]) : number[] => {
  const newArray = array1.filter(num => array2.includes(num))
  return newArray;
 }
