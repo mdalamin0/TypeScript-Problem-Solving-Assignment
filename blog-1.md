@@ -1,5 +1,5 @@
 <!-- Question -->
-* How do Pick and Omit utility types prevent code duplication while creating specialized "slices" of a master interface? Discuss how this keeps your code DRY (Don't Repeat Yourself).
+#### How do Pick and Omit utility types prevent code duplication while creating specialized "slices" of a master interface? Discuss how this keeps your code DRY (Don't Repeat Yourself).
 
 -------------
 
@@ -50,6 +50,7 @@ type ProdutWithoutColor = Omit<Product, "color">
 একই প্রপার্টি বারবার লিখতে হলো না। 
 
 ## Conclusion
+--------
 `Pick` এবং `Omit` TypeScript এর খুব powerfull utility type। এগুলোর মাধ্যমে আমরা master বা main interface থেকে প্রয়োজন অনুযায়ী  slice তৈরি করতে পারি, কোন ধরনের duplicate code লেখা ছাড়াই। 
 ### summury
 `pick` ব্যাবহার করে আমরা নির্দিষ্ট কিছু টাইপ তুলে নিয়ে নতুন টাইপ তৈরি করতে পারি duplicate কোড ছাড়াই। 
